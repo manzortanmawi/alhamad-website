@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0f13">
+  <meta name="description" content="الحماد للعقارات - ثقة تُبنى وقيمة تُستثمر. حلول عقارية متكاملة، وساطة معتمدة، تسويق رقمي فائق الجودة، وفرص استثمارية في حائل والمملكة.">
+  <title>الحماد للعقارات | ثقة تُبنى وقيمة تُستثمر</title>
+  
+  <link rel="stylesheet" href="assets/css/site.css">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "الحماد للعقارات",
+    "legalName": "مكتب مبارك جارالله الناصر الحماد للعقارات",
+    "identifier": "7024177805",
+    "license": "1200028471",
+    "telephone": "+966500000000",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "حائل",
+      "addressCountry": "SA"
+    },
+    "sameAs": [
+      "https://www.tiktok.com/@alhammad4aqar",
+      "https://whatsapp.com/channel/0029Vb6rVEJ7IUYO0K2jTs0K"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brandmark">
+        <img src="assets/images/logo-white.png" alt="شعار الحماد للعقارات">
+      </span>
+      <span class="brandname">
+        الحماد للعقارات
+        <small>ALHAMMAD REAL ESTATE</small>
+      </span>
+    </a>
+    
+    <nav class="nav">
+      <a href="index.html" class="active">الرئيسية</a>
+      <a href="#properties-section">العقارات والفرص</a>
+      <a href="about.html">من نحن</a>
+      <a href="services.html">خدماتنا</a>
+      <a href="investment.html">الاستثمار</a>
+      <a href="#calculator-section">حاسبة التمويل</a>
+      <a href="contact.html">تواصل معنا</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="btn-header-cta" href="#list-property-section">
+        <span>اعرض عقارك</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <button class="menu" aria-label="القائمة">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section with 3D Canvas -->
+    <section class="hero">
+      <canvas id="hero-canvas"></canvas>
+      
+      <div class="hero-copy">
+        <div class="hero-badge">
+          <span>✦ الحماد للعقارات • رخصة فال رقم 1200028471</span>
+        </div>
+        <h1>
+          ثقة تُبنى..<br>
+          <span class="gold-text">وقيمة تُستثمر</span>
+        </h1>
+        <p>
+          منظومة عقارية متكاملة ومرخصة من الهيئة العامة للعقار. نجمع بين الفهم العميق لمتغيرات السوق، والتسويق الرقمي المتقدم، لنربط بين احتياج العميل والفرصة الاستثمارية الأمثل في حائل ومناطق المملكة.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#properties-section">
+            <span>استكشف العقارات المتاحة</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m19 12-7 7-7-7M12 19V5"/></svg>
+          </a>
+          <a class="btn ghost" href="#list-property-section">اعرض عقارك للتسويق</a>
+        </div>
+      </div>
+
+      <!-- Hero Search & Filter Dock -->
+      <div class="hero-search-wrapper">
+        <div class="hero-search-dock">
+          <div class="search-tabs">
+            <button class="search-tab active" data-purpose="all">جميع العروض</button>
+            <button class="search-tab" data-purpose="buy">شراء وتملك</button>
+            <button class="search-tab" data-purpose="invest">فرص استثمارية</button>
+            <button class="search-tab" data-purpose="rent">إيجار تجاري وسكني</button>
+          </div>
+          
+          <div class="search-grid">
+            <div class="search-field">
+              <label>نوع العقار</label>
+              <select id="search-prop-type">
+                <option value="all">جميع الأنواع</option>
+                <option value="residential">فلل وقصور سكنية</option>
+                <option value="commercial">عمائر ومراكز تجارية</option>
+                <option value="land">أراضٍ ومخططات</option>
+                <option value="investment">أصول وفرص مدرة للدخل</option>
+              </select>
+            </div>
+
+            <div class="search-field">
+              <label>المدينة / الحي</label>
+              <select id="search-district">
+                <option value="all">جميع الأحياء (حائل)</option>
+                <option value="حي النقرة">حي النقرة</option>
+                <option value="طريق الملك فهد">طريق الملك فهد</option>
+                <option value="حي المصيف">حي المصيف</option>
+                <option value="حي أجا">حي أجا</option>
+                <option value="طريق الملك سلمان">طريق الملك سلمان</option>
+                <option value="حي الياسمين">حي الياسمين</option>
+              </select>
+            </div>
+
+            <div class="search-field">
+              <label>نطاق الميزانية</label>
+              <select id="search-price-range">
+                <option value="all">جميع الأسعار</option>
+                <option value="under-2m">حتى 2,000,000 ر.س</option>
+                <option value="2m-5m">من 2 إلى 5 مليون ر.س</option>
+                <option value="above-5m">أكثر من 5 مليون ر.س</option>
+              </select>
+            </div>
+
+            <button class="search-submit-btn" id="hero-search-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <span>بحث فوري</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Official Trust & Accreditations Strip -->
+    <section class="trust-strip">
+      <div class="shell">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon">🏛️</div>
+            <div class="trust-text">
+              <h4>رخصة فال المعتمدة</h4>
+              <p>رخصة وساطة وتسويق: 1200028471</p>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon">📜</div>
+            <div class="trust-text">
+              <h4>الهيئة العامة للعقار</h4>
+              <p>منشأة عقارية مصنفة ومعتمدة</p>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon">🤝</div>
+            <div class="trust-text">
+              <h4>شبكة إيجار الوطنية</h4>
+              <p>عقود إلكترونية موثقة وملزمة</p>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon">💼</div>
+            <div class="trust-text">
+              <h4>الرقم الوطني الموحد</h4>
+              <p>السجل التجاري: 7024177805</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Ticker / Highlights -->
+    <div class="ticker">
+      <div class="ticker-track">
+        <span><b>وساطة عقارية احترافية</b> مبنية على فهم متعمق للسوق</span>
+        <span><b>تسويق نوعي هادف</b> يحقق أعلى انتشار للعين العقارية</span>
+        <span><b>حلول استثمارية</b> تربط رأس المال بأعلى عائد مدروس</span>
+        <span><b>إدارة أملاك وتشغيل</b> تضمن استقرار ونمو الدخل الإيجاري</span>
+        <span><b>استشارات وتثمين</b> تُنير طريقك قبل اتخاذ قرار الشراء أو البيع</span>
+        <span><b>وساطة عقارية احترافية</b> مبنية على فهم متعمق للسوق</span>
+        <span><b>تسويق نوعي هادف</b> يحقق أعلى انتشار للعين العقارية</span>
+      </div>
+    </div>
+
+    <!-- Metrics / Stats Section -->
+    <section class="metrics-wrap">
+      <div class="shell">
+        <div class="metrics">
+          <div class="metric-card reveal">
+            <strong>+1.2 <span class="gold">مليار</span></strong>
+            <span class="label">ريال قيمة التعاملات والأصول العقارية</span>
+          </div>
+
+          <div class="metric-card reveal">
+            <strong>+520 <span class="gold">صفقة</span></strong>
+            <span class="label">صفقة ناجحة موثقة رسمياً</span>
+          </div>
+
+          <div class="metric-card reveal">
+            <strong>99.4<span class="gold">%</span></strong>
+            <span class="label">نسبة رضا وثقة عملائنا والمستثمرين</span>
+          </div>
+
+          <div class="metric-card reveal">
+            <strong>+15 <span class="gold">عاماً</span></strong>
+            <span class="label">خبرة ميدانية راسخة في السوق العقاري</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Properties Showcase Section -->
+    <section class="section" id="properties-section">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <div class="kicker">FEATURED PROPERTIES</div>
+            <h2 class="section-title">عقارات وفرص استثمارية حصرية</h2>
+            <p class="section-copy">خيارات سكنية وتجارية واستثمارية مختارة بعناية، تجمع بين جودة الموقع، وسلامة الصكوك، والعائد الاستثماري الواعد.</p>
+          </div>
+          
+          <div class="property-filter-tabs">
+            <button class="filter-pill active" data-filter="all">
+              <span>الكل</span>
+              <span class="count">6</span>
+            </button>
+            <button class="filter-pill" data-filter="residential">
+              <span>فلل وسكني</span>
+              <span class="count">3</span>
+            </button>
+            <button class="filter-pill" data-filter="commercial">
+              <span>تجاري وإداري</span>
+              <span class="count">1</span>
+            </button>
+            <button class="filter-pill" data-filter="land">
+              <span>أراضٍ ومخططات</span>
+              <span class="count">1</span>
+            </button>
+            <button class="filter-pill" data-filter="investment">
+              <span>فرص استثمارية</span>
+              <span class="count">1</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Properties Grid (Rendered by site.js) -->
+        <div class="properties-grid" id="properties-container"></div>
+      </div>
+    </section>
+
+    <!-- Interactive Mortgage Calculator Section -->
+    <section class="section alt-bg" id="calculator-section">
+      <div class="shell">
+        <div class="kicker">FINANCIAL ESTIMATOR</div>
+        <h2 class="section-title">حاسبة التمويل والاستثمار العقاري</h2>
+        <p class="section-copy">خطط لقرارك العقاري بوضوح تام. احسب القسط الشهري التقديري وتكلفة التمويل بناءً على معاييرك المالية وبمرونة كاملة.</p>
+
+        <div class="calc-wrapper reveal">
+          <div class="calc-grid">
+            <div class="calc-sliders">
+              <!-- Slider 1: Property Price -->
+              <div class="calc-control">
+                <div class="calc-label-row">
+                  <label for="calc-price">سعر العقار التقديري</label>
+                  <span class="calc-value-badge" id="val-calc-price">2,000,000 ر.س</span>
+                </div>
+                <input type="range" class="calc-range" id="calc-price" min="400000" max="15000000" step="50000" value="2850000">
+              </div>
+
+              <!-- Slider 2: Down Payment -->
+              <div class="calc-control">
+                <div class="calc-label-row">
+                  <label for="calc-down">الدفعة الأولى المقدمة (%)</label>
+                  <span class="calc-value-badge" id="val-calc-down">15%</span>
+                </div>
+                <input type="range" class="calc-range" id="calc-down" min="5" max="50" step="5" value="15">
+              </div>
+
+              <!-- Slider 3: Loan Tenure -->
+              <div class="calc-control">
+                <div class="calc-label-row">
+                  <label for="calc-years">مدة التمويل (بالسنوات)</label>
+                  <span class="calc-value-badge" id="val-calc-years">20 سنة</span>
+                </div>
+                <input type="range" class="calc-range" id="calc-years" min="5" max="30" step="1" value="20">
+              </div>
+
+              <!-- Slider 4: Profit Rate -->
+              <div class="calc-control">
+                <div class="calc-label-row">
+                  <label for="calc-rate">معدل النسبة السنوي التقريبي (APR)</label>
+                  <span class="calc-value-badge" id="val-calc-rate">3.5%</span>
+                </div>
+                <input type="range" class="calc-range" id="calc-rate" min="2" max="7" step="0.1" value="3.5">
+              </div>
+            </div>
+
+            <!-- Calculation Output Card -->
+            <div class="calc-result-box">
+              <div class="calc-main-result">
+                <span>القسط الشهري المتوقع</span>
+                <strong id="res-monthly-payment">0 ر.س</strong>
+              </div>
+
+              <div class="calc-details-list">
+                <div class="calc-row">
+                  <span class="name">مبلغ التمويل الصافي:</span>
+                  <span class="val" id="res-loan-amount">0 ر.س</span>
+                </div>
+                <div class="calc-row">
+                  <span class="name">إجمالي الأرباح التقديرية:</span>
+                  <span class="val" id="res-total-interest">0 ر.س</span>
+                </div>
+                <div class="calc-row">
+                  <span class="name">إجمالي المبلغ المسدد بالكامل:</span>
+                  <span class="val" id="res-total-payment">0 ر.س</span>
+                </div>
+              </div>
+
+              <a class="btn" style="width:100%; justify-content:center; margin-top:10px;" href="https://wa.me/966500000000?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AA%D9%85%D9%88%D9%8A%D9%84%D9%8A%D8%A9%20%D9%88%D8%B9%D9%82%D8%A7%D8%B1%D9%8A%D8%A9%20%D9%85%D9%86%20%D9%85%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D8%AD%D9%85%D8%A7%D8%AF." target="_blank" rel="noopener">
+                طلب استشارة تمويلية معتمدة
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ha'il District Investment Guide -->
+    <section class="section">
+      <div class="shell">
+        <div class="kicker">MARKET INSIGHTS</div>
+        <h2 class="section-title">دليل أحياء حائل والفرص الاستثمارية</h2>
+        <p class="section-copy">قراءة استراتيجية لأبرز المناطق ذات الطلب العالي والنمو الرأسمالي المتسارع في مدينة حائل.</p>
+
+        <div class="districts-grid">
+          <div class="district-card reveal">
+            <div>
+              <span class="district-badge">الرقي السكني الأول</span>
+              <h3>حي النقرة</h3>
+              <p>الوجهة السكنية الأكثر طلباً للعائلات والفلل الفاخرة، مكتمل البنية التحتية والمرافق التعليمية والصحية.</p>
+            </div>
+            <div class="district-stats">
+              <span>مؤشر النمو السنوي</span>
+              <strong>+12.4% سنوي</strong>
+            </div>
+          </div>
+
+          <div class="district-card reveal">
+            <div>
+              <span class="district-badge">الشريان التجاري</span>
+              <h3>طريق الملك فهد</h3>
+              <p>عصب الحركة الاقتصادية ومقرات الشركات الكبرى والمجمعات التجارية، مناسب جداً للاستثمارات المدرة للدخل.</p>
+            </div>
+            <div class="district-stats">
+              <span>عائد الاستثمار التجاري</span>
+              <strong>8.5% - 10.2%</strong>
+            </div>
+          </div>
+
+          <div class="district-card reveal">
+            <div>
+              <span class="district-badge">الفخامة والإطلالة</span>
+              <h3>حي المصيف وأجا</h3>
+              <p>مناطق هادئة تتميز بالقصور الحديثة والقرب من الواجهات الجبلية الخلابة والمناخ المنعش في حائل.</p>
+            </div>
+            <div class="district-stats">
+              <span>مستوى الإقبال والطلب</span>
+              <strong>مرتفع جداً ★★★★★</strong>
+            </div>
+          </div>
+
+          <div class="district-card reveal">
+            <div>
+              <span class="district-badge">المستقبل والتوسع</span>
+              <h3>طريق الملك سلمان</h3>
+              <p>محور التوسع الحضري الجديد مع مشاريع حيوية وبوليفارد حديث يوفر فرصاً للأراضي والمطاعم والكافيهات.</p>
+            </div>
+            <div class="district-stats">
+              <span>العائد الرأسمالي المتوقع</span>
+              <strong>+18.5% خلال عامين</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D Journey Interactive Section -->
+    <section class="journey">
+      <div class="journey-sticky">
+        <canvas class="journey-canvas"></canvas>
+        <div class="journey-copy">
+          <article class="scene-label active">
+            <span class="scene-no">01 RESIDENTIAL</span>
+            <h3>سكن يصنع قيمة</h3>
+            <p>فلل ومنازل وقصور سكنية بخيارات معمارية مدروسة تلبي تطلعات السكن الراقي وتضمن حفظ القيمة على المدى البعيد.</p>
+          </article>
+          
+          <article class="scene-label">
+            <span class="scene-no">02 COMMERCIAL</span>
+            <h3>أصل يعمل معك</h3>
+            <p>مبانٍ ومراكز تجارية ومكاتب تنفيذية تساعد الأنشطة على الازدهار، وتحقق عائداً تشغيلياً مستداماً ومجزياً للمستثمر.</p>
+          </article>
+          
+          <article class="scene-label">
+            <span class="scene-no">03 LAND</span>
+            <h3>الأرض بداية الاحتمال</h3>
+            <p>أراضٍ خام ومخططات استثمارية تُقرأ ضمن سياق النمو الحضري، وخطط التطوير، ومرونة الاستخدام المستقبلي.</p>
+          </article>
+          
+          <article class="scene-label">
+            <span class="scene-no">04 INVESTMENT</span>
+            <h3>من العقار إلى الفرصة</h3>
+            <p>نربط بيانات السوق ومؤشرات الطلب لنبني للمستثمر دراسة واقعية تعظم الفائدة وتحدد التوقيت المثالي للدخول والخروج.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services-section">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <div class="kicker">OUR SERVICES</div>
+            <h2 class="section-title">منظومة خدمات عقارية متكاملة</h2>
+            <p class="section-copy">نرافق عملاءنا في كافة مراحل الرحلة العقارية باحترافية وتوثيق معتمد يحمي كافة الأطراف.</p>
+          </div>
+          <a class="btn ghost" href="services.html">استعراض كافة تفاصيل الخدمات</a>
+        </div>
+
+        <div class="services-grid">
+          <article class="service reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 4l9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg>
+            </div>
+            <div>
+              <h3>الوساطة العقارية المعتمدة</h3>
+              <p>إدارة عمليات البيع والشراء والتفاوض برخصة فال الرسمية، مع ضمان الشفافية والالتزام بالأنظمة العقارية المعتمدة.</p>
+              <a class="service-link" href="services.html">تفاصيل الخدمة ←</a>
+            </div>
+          </article>
+
+          <article class="service reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9l8-5 8 5v10"/><path d="M8 19v-5h8v5"/></svg>
+            </div>
+            <div>
+              <h3>التسويق العقاري الرقمي</h3>
+              <p>حملات تسويقية احترافية مدعومة بإنتاج مرئي وتصوير سينمائي واستهداف دقيق يصل بالعقار لأعلى شريحة من المشترين الجادين.</p>
+              <a class="service-link" href="services.html">تفاصيل الخدمة ←</a>
+            </div>
+          </article>
+
+          <article class="service reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16M6 17l4-5 3 3 5-8"/></svg>
+            </div>
+            <div>
+              <h3>الاستشارات ودراسات السوق</h3>
+              <p>تحليل عميق للفرص والبدائل قبل الشراء أو البيع، وتقديم التوصيات المبنية على مؤشرات العرض والطلب في حائل والمملكة.</p>
+              <a class="service-link" href="services.html">تفاصيل الخدمة ←</a>
+            </div>
+          </article>
+
+          <article class="service reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/></svg>
+            </div>
+            <div>
+              <h3>إدارة وتشغيل الأملاك</h3>
+              <p>متابعة منظمة للتحصيل والصيانة وإبرام العقود الإلكترونية عبر شبكة إيجار، بما يحقق راحة البال للمالك واستقرار التدفق المالي.</p>
+              <a class="service-link" href="services.html">تفاصيل الخدمة ←</a>
+            </div>
+          </article>
+
+          <article class="service reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20h18M5 20V8l7-4 7 4v12"/><path d="M9 20v-7h6v7"/></svg>
+            </div>
+            <div>
+              <h3>صناعة الفرص الاستثمارية</h3>
+              <p>توفير أراضٍ ومبانٍ تجارية جاهزة للتطوير أو الاستحواذ مع دراسة العائد والمخاطر لخدمة محافظ المستثمرين.</p>
+              <a class="service-link" href="investment.html">تفاصيل الخدمة ←</a>
+            </div>
+          </article>
+
+          <article class="service reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M8 12h8M12 8v8"/></svg>
+            </div>
+            <div>
+              <h3>حلول المطورين والمشاريع</h3>
+              <p>شريك استراتيجي لتسويق المخططات والعمائر السكنية والمجمعات التجارية من التخطيط وحتى بيع آخر وحدة.</p>
+              <a class="service-link" href="services.html">تفاصيل الخدمة ←</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- List Your Property / Valuation Banner & Form -->
+    <section class="section" id="list-property-section">
+      <div class="shell">
+        <div class="list-prop-banner reveal">
+          <div class="list-prop-text">
+            <div class="kicker">OWNERS & INVESTORS</div>
+            <h2>هل ترغب في بيع عقارك أو عرضه للاستثمار بأفضل قيمة؟</h2>
+            <p>
+              نضع عقارك أمام آلاف المشترين والمستثمرين الجادين في حائل والرياض والشرقية عبر شبكة علاقاتنا وحملاتنا التسويقية الاحترافية. سجل بيانات عقارك وسيتواصل معك مستشارنا المختص خلال 24 ساعة.
+            </p>
+            <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
+              <span class="badge badge-gold">✓ رخصة وساطة رسمية</span>
+              <span class="badge badge-gold">✓ تصوير وإنتاج احترافي</span>
+              <span class="badge badge-gold">✓ تقييم سعري واقعي</span>
+            </div>
+          </div>
+
+          <form class="prop-submission-form" id="prop-submission-form">
+            <h3 style="font-size:20px; font-weight:700; color:#fff; margin-bottom:4px;">اعرض عقارك معنا</h3>
+            <p style="font-size:13px; color:var(--silver-400); margin-bottom:10px;">املأ البيانات وسيقوم فريق الوساطة بالتواصل معك فوراً</p>
+
+            <div class="form-row-2">
+              <input type="text" id="owner-name" placeholder="اسمك الكريم *" required>
+              <input type="tel" id="owner-phone" placeholder="رقم الجوال (05xxxxxxxx) *" required>
+            </div>
+
+            <div class="form-row-2">
+              <select id="owner-prop-type" required>
+                <option value="">نوع العقار *</option>
+                <option value="فيلا">فيلا سكنية</option>
+                <option value="عمارة">عمارة سكنية / تجارية</option>
+                <option value="أرض">أرض / مخطط</option>
+                <option value="شقة">شقة تمليك</option>
+                <option value="مستودع / تجاري">مستودع أو مجمع</option>
+              </select>
+              <input type="text" id="owner-district" placeholder="المدينة والحي (مثال: حائل - النقرة) *" required>
+            </div>
+
+            <input type="text" id="owner-price" placeholder="السعر المطلوب أو التقديري (ر.س)">
+
+            <textarea id="owner-notes" rows="2" placeholder="ملاحظات إضافية عن المساحة أو مواصفات العقار..."></textarea>
+
+            <button type="submit" class="btn" style="width:100%; justify-content:center;">
+              إرسال طلب العرض عبر واتساب المعتمد
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision, Mission & Direction (From vision.jpeg) -->
+    <section class="section alt-bg">
+      <div class="shell">
+        <div class="kicker">VISION & MISSION</div>
+        <h2 class="section-title">رؤيتنا ورسالتنا لقطاع عقاري واعد</h2>
+        <p class="section-copy">ننطلق من ثوابت مهنية تهدف إلى ترسيخ الثقة وتوفير قيمة استثمارية حقيقية ومستدامة.</p>
+
+        <div class="vision-wrap">
+          <article class="vision-card reveal">
+            <span class="kicker">VISION</span>
+            <h3>الرؤية</h3>
+            <p>أن يكون الحمّاد للعقارات اسماً موثوقاً ورائداً في القطاع العقاري، من خلال تقديم خدمات عقارية احترافية وصناعة فرص استثمارية مستدامة تساهم في تنمية المشهد العقاري.</p>
+          </article>
+
+          <article class="vision-card reveal">
+            <span class="kicker">MISSION</span>
+            <h3>الرسالة</h3>
+            <p>تقديم حلول وخدمات عقارية متكاملة باحترافية وشفافية، تلبي احتياجات العملاء، وتعزز قيمة أصولهم، وتبني علاقات طويلة الأمد قائمة على الثقة والمصداقية المطلقة.</p>
+          </article>
+        </div>
+
+        <div class="goals">
+          <div class="goal reveal">تعزيز مكانة الحمّاد للعقارات كعلامة عقارية موثوقة في حائل والمملكة</div>
+          <div class="goal reveal">تقديم تجربة عقارية احترافية ومتميزة ترتقي لتطلعات عملائنا</div>
+          <div class="goal reveal">تطوير خدمات الوساطة والتسويق والاستشارات العقارية وفق أعلى المعايير</div>
+          <div class="goal reveal">توظيف أحدث تقنيات التسويق الرقمي والتصوير لخدمة تسويق العقارات</div>
+          <div class="goal reveal">بناء شبكة قوية ومترابطة من العملاء والمستثمرين والملاك الموثوقين</div>
+          <div class="goal reveal">المساهمة في تنشيط وتطوير السوق العقاري في حائل والتوسع مستقبلاً</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+      <div class="shell">
+        <div class="kicker">TESTIMONIALS</div>
+        <h2 class="section-title">ماذا يقول عملاؤنا وشركاء نجاحنا؟</h2>
+        <p class="section-copy">شهادات نعتز بها من مستثمرين وملاك خاضوا معنا تجربة عقارية مبنية على الشفافية والاحترافية.</p>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p>«تجربتي مع الحماد للعقارات في شراء أرض استثمارية كانت ممتازة جداً. دقة في المعلومات، وضوح في الصكوك والإجراءات، وحرص كبير على مصلحة المشتري قبل إتمام الصفقة.»</p>
+            </div>
+            <div class="test-author">
+              <div class="test-avatar">م</div>
+              <div class="test-info">
+                <h4>م. عبدالمحسن الشمري</h4>
+                <span>مستثمر عقاري - حائل</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p>«عرضت فيلتي بحي النقرة للتسويق مع مكتب الحماد، وخلال أقل من أسبوعين تم توفير مشتري جاد بالسعر المطلوب تماماً مع إفراغ إلكتروني نظامي وسلس عبر منصة البورصة العقارية.»</p>
+            </div>
+            <div class="test-author">
+              <div class="test-avatar">ف</div>
+              <div class="test-info">
+                <h4>أ. فهد التميمي</h4>
+                <span>مالك عقار سكني</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p>«الاحترافية في إدارة الأملاك وتحصيل الإيجارات هي ما يميزهم بحق. تقارير دورية ومتابعة للمستأجرين وفرت عليّ الكثير من الوقت والجهد في إدارة عمارتي التجارية.»</p>
+            </div>
+            <div class="test-author">
+              <div class="test-avatar">س</div>
+              <div class="test-info">
+                <h4>أ. سلطان الخالد</h4>
+                <span>مالك عمارة تجارية</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect & Social Hub Section -->
+    <section class="section alt-bg">
+      <div class="shell">
+        <div class="kicker">CONNECT & STAY UPDATED</div>
+        <h2 class="section-title">قنوات التواصل والمركز الرقمي</h2>
+        <p class="section-copy">تابع أحدث الفرص والعروض الحصرية مباشرة عبر منصاتنا الرسمية.</p>
+
+        <div class="social-grid">
+          <article class="social-main reveal">
+            <div>
+              <span class="badge badge-gold" style="margin-bottom:16px;">قنواتنا الرسمية المعتمدة</span>
+              <h3>كن أول من يطّلع على الفرص الاستثمارية والعروض العقارية في حائل</h3>
+              <p style="color:var(--silver-400); margin-top:14px; font-size:16px; line-height:1.8;">
+                ننشر التغطيات اليومية والعروض الحصرية ومؤشرات أسعار السوق على حساباتنا الرسمية.
+              </p>
+            </div>
+            
+            <div class="social-links">
+              <a class="social-link" href="https://www.tiktok.com/@alhammad4aqar?_t=ZS-8zVYkKUBeWg&_r=1" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3v10.2a3.4 3.4 0 1 1-2.3-3.2V6.9c-3.4-.5-6 2-6 5.3A6.4 6.4 0 0 0 12 18.6a6.2 6.2 0 0 0 6.2-6.2V8.2A8 8 0 0 0 22 9.5V6.4A4.9 4.9 0 0 1 17.2 3z"/></svg>
+                <span>تيك توك @alhammad4aqar</span>
+              </a>
+              <a class="social-link" href="https://whatsapp.com/channel/0029Vb6rVEJ7IUYO0K2jTs0K" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a8 8 0 0 0-6.8 12.2L4 21l5.9-1.2A8 8 0 1 0 12 3m4.6 11.5c-.2.6-1 1.1-1.6 1.2-.5.1-1.2.2-3.6-.8-3-1.3-5-4.4-5.2-4.6-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.9-.4h.6c.2 0 .5-.1.7.5l.9 2.1c.1.2.1.5 0 .7l-.4.7-.6.6c-.2.2-.4.4-.2.8.2.4.9 1.5 1.9 2.4 1.3 1.2 2.4 1.6 2.8 1.8.4.2.6.2.8-.1l1.1-1.3c.3-.4.5-.3.9-.2l2 .9c.4.2.7.3.8.5.1.1.1.7-.1 1.3"/></svg>
+                <span>قناة واتساب الرسمية</span>
+              </a>
+              <button class="social-link" data-snap>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-2.4 0-4.4 2-4.4 4.5 0 .7.1 1.3.1 1.9-.4.7-1.1 1-1.7 1.2-.5.2-.5.8 0 1 .4.2 1 .4 1.5.5.4.8 1.2 1.6 2.4 1.9.3.1.5.4.6.8.1.3.3.4.6.4.3 0 .7-.2 1.9-.2s1.6.2 1.9.2c.3 0 .5-.1.6-.4.1-.4.3-.7.6-.8 1.2-.3 2-1.1 2.4-1.9.5-.1 1.1-.3 1.5-.5.5-.2.5-.8 0-1-.6-.2-1.3-.5-1.7-1.2 0-.6.1-1.2.1-1.9C16.4 5 14.4 3 12 3"/></svg>
+                <span>سناب شات (سناب كود)</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="qr-card reveal">
+            <img src="assets/images/whatsapp-channel.jpeg" alt="رمز QR قناة الحماد للعقارات على واتساب">
+            <h4>قناة الحماد للعقارات على واتساب</h4>
+            <p>امسح الكود بكاميرا هاتفك للانضمام الفوري للقناة والاطلاع على آخر المزادات والعروض العقارية.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Corporate Footer -->
+  <footer class="footer">
+    <div class="shell">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2>الحماد للعقارات<br><span>ثقة تُبنى وقيمة تُستثمر</span></h2>
+          <p>
+            مكتب مبارك جارالله الناصر الحماد للعقارات. وساطة عقارية معتمدة، تسويق رقمي فائق الاحترافية، وإدارة وتشغيل للأصول العقارية في حائل وكافة مناطق المملكة العربية السعودية.
+          </p>
+          <div style="margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;">
+            <span class="badge badge-gold">الرقم الموحد: 7024177805</span>
+            <span class="badge badge-gold">رخصة فال: 1200028471</span>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>روابط سريعة</h4>
+          <div class="footer-links">
+            <a href="index.html">الصفحة الرئيسية</a>
+            <a href="#properties-section">العقارات والفرص الحصرية</a>
+            <a href="about.html">عن الحماد للعقارات</a>
+            <a href="services.html">خدماتنا الشاملة</a>
+            <a href="investment.html">الفرص الاستثمارية</a>
+            <a href="#calculator-section">حاسبة التمويل العقاري</a>
+            <a href="contact.html">اتصل بنا والتراخيص</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>ساعات العمل والزيارة</h4>
+          <div class="footer-links" style="color:var(--silver-400); font-size:14px; line-height:1.8;">
+            <p>📍 المقر: حائل، المملكة العربية السعودية</p>
+            <p>⏰ الأحد - الخميس: 9:00 ص - 10:00 م</p>
+            <p>⏰ الجمعة: 4:00 م - 10:00 م</p>
+            <p>📞 هاتف / واتساب: متاح على مدار الساعة</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-base">
+        <span>© 2026 مكتب مبارك جارالله الناصر الحماد للعقارات - جميع الحقوق محفوظة</span>
+        <span>السجل التجاري الموحد: 7024177805 | رخصة وساطة وتسويق فال: 1200028471</span>
+        <span>ALHAMMAD REAL ESTATE</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Side Floating Social Rail -->
+  <aside class="social-rail">
+    <a aria-label="تيك توك" href="https://www.tiktok.com/@alhammad4aqar?_t=ZS-8zVYkKUBeWg&_r=1" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3v10.2a3.4 3.4 0 1 1-2.3-3.2V6.9c-3.4-.5-6 2-6 5.3A6.4 6.4 0 0 0 12 18.6a6.2 6.2 0 0 0 6.2-6.2V8.2A8 8 0 0 0 22 9.5V6.4A4.9 4.9 0 0 1 17.2 3z"/></svg>
+    </a>
+    <a aria-label="واتساب" href="https://whatsapp.com/channel/0029Vb6rVEJ7IUYO0K2jTs0K" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a8 8 0 0 0-6.8 12.2L4 21l5.9-1.2A8 8 0 1 0 12 3m4.6 11.5c-.2.6-1 1.1-1.6 1.2-.5.1-1.2.2-3.6-.8-3-1.3-5-4.4-5.2-4.6-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.9-.4h.6c.2 0 .5-.1.7.5l.9 2.1c.1.2.1.5 0 .7l-.4.7-.6.6c-.2.2-.4.4-.2.8.2.4.9 1.5 1.9 2.4 1.3 1.2 2.4 1.6 2.8 1.8.4.2.6.2.8-.1l1.1-1.3c.3-.4.5-.3.9-.2l2 .9c.4.2.7.3.8.5.1.1.1.7-.1 1.3"/></svg>
+    </a>
+    <button aria-label="سناب شات" data-snap>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-2.4 0-4.4 2-4.4 4.5 0 .7.1 1.3.1 1.9-.4.7-1.1 1-1.7 1.2-.5.2-.5.8 0 1 .4.2 1 .4 1.5.5.4.8 1.2 1.6 2.4 1.9.3.1.5.4.6.8.1.3.3.4.6.4.3 0 .7-.2 1.9-.2s1.6.2 1.9.2c.3 0 .5-.1.6-.4.1-.4.3-.7.6-.8 1.2-.3 2-1.1 2.4-1.9.5-.1 1.1-.3 1.5-.5.5-.2.5-.8 0-1-.6-.2-1.3-.5-1.7-1.2 0-.6.1-1.2.1-1.9C16.4 5 14.4 3 12 3"/></svg>
+    </button>
+  </aside>
+
+  <!-- Bottom Floating WhatsApp Button -->
+  <a class="floating-wa-btn" href="https://wa.me/966500000000?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D9%88%D8%B9%D8%B1%D9%88%D8%B6%20%D8%A7%D9%84%D8%AD%D9%85%D8%A7%D8%AF%20%D9%84%D9%84%D8%B9%D9%82%D8%A7%D8%B1%D8%A7%D8%AA." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a8 8 0 0 0-6.8 12.2L4 21l5.9-1.2A8 8 0 1 0 12 3m4.6 11.5c-.2.6-1 1.1-1.6 1.2-.5.1-1.2.2-3.6-.8-3-1.3-5-4.4-5.2-4.6-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.9-.4h.6c.2 0 .5-.1.7.5l.9 2.1c.1.2.1.5 0 .7l-.4.7-.6.6c-.2.2-.4.4-.2.8.2.4.9 1.5 1.9 2.4 1.3 1.2 2.4 1.6 2.8 1.8.4.2.6.2.8-.1l1.1-1.3c.3-.4.5-.3.9-.2l2 .9c.4.2.7.3.8.5.1.1.1.7-.1 1.3"/></svg>
+    <span>تواصل عبر واتساب المعتمد</span>
+  </a>
+
+  <!-- Property Quick View Modal -->
+  <div class="modal" id="property-modal">
+    <div class="modal-card lg">
+      <div class="modal-bar">
+        <strong>تفاصيل ومعاينة العقار</strong>
+        <button class="modal-close" id="prop-modal-close" aria-label="إغلاق">×</button>
+      </div>
+      <div class="modal-prop-details" id="property-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- Snapcode Modal -->
+  <div class="modal" id="snap-modal">
+    <div class="modal-card">
+      <img src="assets/images/snapcode.jpeg" alt="سناب شات الحماد للعقارات">
+      <div class="modal-bar">
+        <strong>سناب شات الحماد للعقارات</strong>
+        <button class="modal-close" id="snap-close" aria-label="إغلاق">×</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="assets/js/site.js"></script>
+</body>
+</html>
